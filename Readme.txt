@@ -1,0 +1,1 @@
+Run NodeServer.js and then visit http://localhost:8080 to allow the local website to utilize cookies.

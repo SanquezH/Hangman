@@ -1,0 +1,26 @@
+/*
+Sanquez Heard
+Hangman Project
+04/27/2024
+*/
+
+* {
+box-sizing: border-box; /*Applies to all elements. Used to keep stickman components on the right side of the screen*/
+}
+
+.column {
+float: left;
+}
+
+.left {
+width: 25%;
+}
+
+.right {
+width: 75%;
+}
+
+
+.displayLetters {
+    font-size: 70px;
+}

@@ -1,0 +1,49 @@
+<!--
+Sanquez Heard
+Hangman Project
+04/27/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hangman</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="column left">
+                <h1>Hangman</h1>
+                <h2>Player 2</h2>
+                <p id="firstPlayer"></p>
+                <p>Try to solve the word. For each incorrect guess, the stickman will begin to disappear.<br>Guess the correct letters before the stickman becomes invinsible.</p>
+                
+                <!--Form used to guess the word and submit results to the next page.-->
+                <form id="guesWordForm" action="http://localhost:8080/results/index.html">
+                    <label for="name">Please enter your name:</label><br>
+                    <input type="text" id="name" name="name" autocomplete="name" pattern="[A-Za-z]{2,15}" required><br>
+                    <div id ="notification"></div>
+                    <label for="letterGuess">Enter a letter guesses below</label><br>
+                    <input type="text" id="letterGuess" name="letterGuess" pattern="[A-Za-z]{1}" required><br>
+                    <button id="submitButton" type="submit">Submit Guess</button>
+                    <input type="hidden" id="word" name="word"><br>
+                    <input type="hidden" id="score" name="score"><br>
+                    <input type="hidden" id="player1" name="player1"><br>
+                    <input type="hidden" id="player2" name="player2"><br>
+                </form>
+            </div>
+            
+            <div class="column right">
+                <p>Lives remaining</p>
+                <p id="lives">6</p>
+                <img id="stickman" src="Assets/Images/1.png" alt="Stickman Figure" width="177" height="311">
+                <p>Incorrect Guesses:</p>
+                <p id='incorrectGuesses'></p>
+                <p id="wordProgress" class="displayLetters"></p>
+            </div>
+        </div>
+    </body>
+</html>

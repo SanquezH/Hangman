@@ -1,0 +1,38 @@
+<!--
+Sanquez Heard
+Hangman Project
+04/27/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hangman</title>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="column left">
+                <h1>Hangman</h1>
+                <h2>Player 1</h2>
+                <p>Welcome to the classical game of Hangman. Please fill out the information below to begin playing.</p>
+                <!--Form used to set the word.-->
+                <form id="setWordForm">
+                    <label for="name">Please enter your name:</label><br>
+                    <input type="text" id="name" name="name" autocomplete="name" pattern="[A-Za-z]{2,15}" required><br>
+                    <label for="word">Please enter a word<br>for player 2 to guess</label><br>
+                    <input type="password" id="word" name="word" pattern="^[A-Za-z]{1,15}$" required><br>
+                    <button type="submit">Go</button>
+                </form>
+                <button id="hideWord">Show/Hide Word</button>
+            </div>
+            
+            <div class="column right">
+                <img src="Assets/Images/1.png" alt="Stickman Figure" width="177" height="311">
+            </div>
+        </div>
+    </body>
+</html>
